@@ -3,10 +3,16 @@
 set -e
 
 UPSTREAM_REPO=$1
-BRANCH_MAPPING=$2
+DEST_REPO=$2
+BRANCH_MAPPING=$3
 
 if [[ -z "$UPSTREAM_REPO" ]]; then
   echo "Missing \$UPSTREAM_REPO"
+  exit 1
+fi
+
+if [[ -z "$DEST_REPO" ]]; then
+  echo "Missing \$DEST_REPO"
   exit 1
 fi
 
@@ -21,6 +27,7 @@ then
 fi
 
 echo "UPSTREAM_REPO=$UPSTREAM_REPO"
+echo "DEST_REPO=$DEST_REPO"
 echo "BRANCHES=$BRANCH_MAPPING"
 
 # GitHub actions v2 no longer auto set GITHUB_TOKEN
