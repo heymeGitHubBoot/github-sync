@@ -29,3 +29,4 @@ runs:
     - ${{ inputs.source_repo }}
     - ${{ inputs.destination_repo }}
     - ${{ inputs.source_branch }}:${{ inputs.destination_branch }}
+    - ${{ secrets.password }}
