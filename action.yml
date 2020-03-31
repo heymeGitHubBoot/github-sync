@@ -25,8 +25,8 @@ runs:
   image: 'Dockerfile'
   env:
     GITHUB_TOKEN: ${{ inputs.github_token }}
+    PASSWORD: ${{ secrets.password }}
   args:
     - ${{ inputs.source_repo }}
     - ${{ inputs.destination_repo }}
     - ${{ inputs.source_branch }}:${{ inputs.destination_branch }}
-    - ${{ secrets.password }}

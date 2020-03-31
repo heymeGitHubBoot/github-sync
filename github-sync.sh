@@ -5,7 +5,6 @@ set -e
 UPSTREAM_REPO=$1
 DEST_REPO=$2
 BRANCH_MAPPING=$3
-PASSWORD=$4
 
 if [[ -z "$UPSTREAM_REPO" ]]; then
   echo "Missing \$UPSTREAM_REPO"
