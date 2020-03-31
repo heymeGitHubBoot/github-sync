@@ -29,10 +29,13 @@ fi
 echo "UPSTREAM_REPO=$UPSTREAM_REPO"
 echo "DEST_REPO=$DEST_REPO"
 echo "BRANCHES=$BRANCH_MAPPING"
+echo "GITHUB_ACTOR=$GITHUB_ACTOR"
+echo "GITHUB_TOKEN=$GITHUB_TOKEN"
+echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
 
 # GitHub actions v2 no longer auto set GITHUB_TOKEN
 #git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"
-git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/nangtani/$DEST_REPO.git"
+git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/nangtani/$DEST_REPO"
 git remote add tmp_upstream "$UPSTREAM_REPO"
 git fetch tmp_upstream
 git remote --verbose
