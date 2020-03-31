@@ -32,7 +32,7 @@ echo "BRANCHES=$BRANCH_MAPPING"
 
 # GitHub actions v2 no longer auto set GITHUB_TOKEN
 #git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY"
-git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/$DEST_REPO"
+git remote set-url origin "https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/nangtani/$DEST_REPO"
 git remote add tmp_upstream "$UPSTREAM_REPO"
 git fetch tmp_upstream
 git remote --verbose
