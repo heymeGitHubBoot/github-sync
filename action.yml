@@ -20,6 +20,9 @@ inputs:
   github_token:
     description: GitHub token secret
     required: true
+  password:
+    description: GitHub password secret
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
